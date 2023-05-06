@@ -1,0 +1,808 @@
+.page-vault-detail {
+  .main-content {
+    margin: 5rem auto;
+    max-width: 1088px;
+    width: 1088px;
+    padding: 0;
+    .cv-row {
+      margin: 0;
+    }
+  }
+  .pair-left-wrapper {
+    margin-right: 15px;
+    background-color: $ui-01;
+
+    .bx--chart-holder {
+      background: $ui-01;
+      color: $text-01;
+      .bx--cc--area path.area {
+        fill: $ui-03 !important;
+        stroke: $ui-03 !important;
+      }
+      .bx--cc--meter rect.container {
+        fill: $ui-03;
+      }
+      .bx--cc--gauge path.arc-background {
+        fill: $ui-03;
+      }
+      .bx--cc--meter-title text.meter-title,
+      .bx--cc--meter-title text.percent-value {
+        fill: $text-01;
+      }
+      .bx--cc--grid rect.chart-grid-backdrop {
+        fill: transparent !important;
+        stroke: transparent;
+      }
+      .bx--cc--grid g.x.grid g.tick line,
+      .bx--cc--grid g.y.grid g.tick line {
+        stroke: $ui-03;
+      }
+      .bx--cc--axes g.axis {
+        g.tick text {
+          font-weight: normal !important;
+          fill: $text-01;
+        }
+        .axis-title {
+          fill: $text-01;
+        }
+      }
+      g.bx--cc--legend g.legend-item text {
+        fill: $text-01;
+      }
+      g.bx--cc--scatter circle.dot.unfilled {
+        fill: $ui-background;
+      }
+      .bx--cc--ruler line.ruler-line {
+        stroke: $text-01;
+      }
+    }
+    @media screen and (max-width: 42rem) {
+      margin-right: unset;
+    }
+  }
+  .pair-tvl-wrapper {
+    padding: 20px 20px;
+    .pair-name-container {
+      display: flex;
+    }
+    .pair-name {
+      color: $text-01;
+      margin-top: 0;
+      font-size: 20px;
+      font-weight: 400;
+    }
+    .chart-meter {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      position: relative;
+      .bx--chart-holder .bx--cc--chart-wrapper {
+        background-color: $ui-01;
+      }
+      .bx--chart-holder {
+        background-color: $ui-01;
+        .bx--cc--meter rect.container {
+          fill: $ui-02;
+        }
+        .bx--cc--meter line.peak {
+          stroke: $ui-02;
+        }
+        .bx--cc--meter-title {
+          .meter-title {
+            font-weight: normal;
+            font-size: 14px;
+          }
+          .percent-value {
+            display: none;
+          }
+        }
+      }
+      .meter-percentage-value {
+        position: absolute;
+        top: 4px;
+        right: 0;
+        color: $text-01;
+      }
+      .meter-bottom-label {
+        position: absolute;
+        left: 0;
+        margin-top: 5px;
+        color: $text-01;
+      }
+      .meter-bottom-value {
+        position: absolute;
+        right: 0;
+        margin-top: 5px;
+        color: $text-01;
+      }
+    }
+    .pair-svg-container {
+      height: 25px;
+      width: 50px;
+      position: relative;
+      .pair-svg {
+        background-color: #c4c4c4;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+      }
+      .pair-svg:last-child {
+        position: absolute;
+        background-color: $ui-05;
+        top: 0px;
+        right: 10px;
+      }
+    }
+    .pair-token-address {
+      color: $text-01;
+      display: flex;
+      justify-content: flex-end;
+      svg {
+        margin-left: 5px;
+      }
+    }
+  }
+  .price-grid {
+    .cv-column {
+      padding: 20px 16px;
+      border: 2px solid $ui-background;
+      border-left-style: none;
+      min-height: 116px;
+      span {
+        color: $text-02;
+        margin-bottom: 5px;
+        display: block;
+        font-size: 12px;
+        &.has-icon {
+          display: flex;
+          align-items: flex-end;
+          svg {
+            margin: 0 0 1px 4px;
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
+      h4 {
+        color: $text-01;
+        margin-bottom: 5px;
+        font-size: 16px;
+      }
+      @media screen and (max-width: 42rem) {
+        border-right-style: none;
+        border-bottom-style: none;
+      }
+    }
+    .cv-column:last-child {
+      border-right-style: none;
+    }
+  }
+  .price-order-wrapper {
+    padding: 30px 15px 15px 20px;
+    border-bottom: 2px solid $ui-background;
+  }
+  .graph-container {
+    .chart-tooltip {
+      background: $ui-03;
+      color: $text-01;
+      min-width: 230px;
+      p {
+        padding: 5px 10px;
+        border-bottom: 1px $ui-04 solid;
+        &:last-child {
+          border-bottom: none;
+        }
+        span {
+          float: right;
+          padding: 0 2px;
+        }
+      }
+    }
+    .bx--chart-holder .bx--cc--chart-wrapper {
+      background-color: $ui-01;
+      .layout-child.header {
+        display: none;
+      }
+    }
+    .bx--chart-holder {
+      background-color: $ui-01;
+      .bx--cc--grid rect.chart-grid-backdrop {
+        fill: $ui-01;
+      }
+      g.bx--cc--area {
+        path {
+          fill: $ui-04 !important;
+        }
+      }
+    }
+  }
+  .lp-hodl-wrapper {
+    padding: 30px 15px 15px 20px;
+  }
+  .section-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: $text-01;
+    margin-bottom: 15px;
+  }
+  .pair-right-wrapper {
+    // position: sticky;
+    // top: 75px;
+    .section-content {
+      margin-bottom: 15px;
+      background-color: $ui-01;
+
+      .total-section {
+        text-align: center;
+        padding: 25px 22%;
+        border-bottom: 2px solid $ui-background;
+        background-color: $ui-02;
+        span {
+          color: $text-01;
+          font-size: 15px;
+          font-weight: 500;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          svg {
+            margin-left: 2px;
+          }
+        }
+        h3 {
+          color: $text-01;
+          margin-top: 0;
+          margin-bottom: 15px;
+        }
+        .bx--skeleton__text {
+          background-color: $ui-02 !important;
+          margin-top: 20px;
+          height: 25px;
+          &:before {
+            left: 0;
+          }
+        }
+      }
+      .value-section {
+        font-size: 14px;
+        .value-row {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          padding: 13px 16px;
+          border-bottom: 1px solid $ui-background;
+          .bx--skeleton__text {
+            min-width: 40px;
+            margin-bottom: 0 !important;
+          }
+        }
+        .title {
+          color: $text-01;
+          display: flex;
+          & svg {
+            margin-left: 3px;
+          }
+        }
+        .value {
+          color: $text-01;
+          font-weight: 600;
+          float: right;
+
+          &.primary-text {
+            color: #ff0038;
+          }
+        }
+        .green {
+          color: #24A148;
+        }
+        .cv-column {
+          margin-top: 10px;
+        }
+      }
+    }
+    .deposit-withdraw {
+      margin-top: 1px;
+
+      .button-wrapper {
+        width: 100%;
+        display: flex;
+        .cv-button {
+          min-width: 160px !important;
+        }
+        .bx--btn {
+          justify-content: center;
+          flex: 1;
+          margin-right: 1px;
+          max-width: inherit;
+          padding: 0;
+        }
+        .withdraw-button {
+          background-color: $ui-05 !important;
+          color: $text-01;
+          margin: 0;
+          margin-left: 1px;
+        }
+        .bx--btn__icon {
+          right: 2rem;
+        }
+      }
+      .insurance {
+        font-size: 12px;
+        color: $icon-02;
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        svg {
+          margin-right: 4px;
+        }
+      }
+      .additional-apy {
+        margin-top: 15px;
+        padding-top: 10px;
+        background-color: $ui-01;
+        color: $text-01;
+        text-align: center;
+        width: 100%;
+        span {
+          display: block;
+          margin-top: 5px;
+        }
+        .btn-subscribe {
+          margin-top: 10px;
+          width: 100%;
+          max-width: 100%;
+          background-color: $ui-02 !important;
+          color: $text-01 !important;
+          border-top: 1px solid $ui-background;
+        }
+      }
+    }
+    .mobile-deposit-withdraw {
+      display: none;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 10px;
+    }
+    @media screen and (max-width: 42rem) {
+      .deposit-withdraw {
+        display: none;
+      }
+      .mobile-deposit-withdraw {
+        margin-bottom: 35px;
+        margin-top: 0;
+        display: flex;
+      }
+    }
+  }
+  .pair-right-wrapper {
+    color: $text-01;
+    .cv-tabs {
+      .cv-tabs__panels {
+        background-color: $ui-01;
+        padding: 16px;
+        padding-bottom: 0;
+      }
+      .cv-tab.bx--tabs--scrollable {
+        .bx--tabs__overflow-indicator--right {
+          background-image: none;
+        }
+        .bx--tabs__overflow-indicator--left {
+          background-image: none;
+        }
+        .bx--tab--overflow-nav-button svg {
+          fill: $text-01;
+        }
+      }
+      .bx--tabs--scrollable__nav-item:hover {
+        .bx--tabs--scrollable__nav-link {
+          color: $text-01;
+        }
+      }
+      .bx--tabs--scrollable__nav-link {
+        color: $text-01;
+        font-size: 15px;
+        width: unset;
+      }
+      .bx--tabs__nav-item--selected {
+        background-color: $ui-01 !important;
+        .bx--tabs--scrollable__nav-link {
+          color: $text-01;
+          font-size: 15px;
+          border-top: 2px solid #ff0038;
+          &:focus {
+            border-top: 2px solid #ff0038 !important;
+          }
+        }
+      }
+      .bx--tabs--scrollable__nav {
+        width: 100%;
+        & li {
+          width: 50%;
+          background-color: $ui-02;
+          & button {
+            width: 100%;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-bottom: none;
+            border-top: 2px solid #e0e0e0;
+            &:focus {
+              border-top: 2px solid #e0e0e0 !important;
+            }
+          }
+        }
+      }
+    }
+    .selector-switcher {
+      margin-bottom: 16px;
+      .bx--content-switcher__label {
+        display: flex;
+        svg {
+          margin-left: 10px;
+        }
+      }
+      .cv-content-switcher-button {
+        background-color: $ui-02;
+        color: $text-02;
+        display: flex;
+        justify-content: center;
+      }
+      .bx--content-switcher--selected {
+        color: $text-01;
+        background-color: $ui-02;
+        border: 1px solid $text-01 !important;
+      }
+    }
+    .token-selector {
+      display: flex;
+      flex-direction: row;
+      .token-input {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        position: relative;
+        .cv-text-input {
+          margin-top: 5px;
+          label {
+            color: $text-01;
+          }
+          .bx--form__helper-text {
+            color: $text-01;
+          }
+          input {
+            background-color: $ui-03 !important;
+          }
+        }
+        .max-button {
+          position: absolute;
+          right: 6px;
+          top: 33px;
+          font-size: 15px !important;
+          padding: 0;
+          min-height: 2rem;
+          padding-left: 10px !important;
+          padding-right: 10px !important;
+          background-color: $ui-03 !important;
+          color: $text-01 !important;
+        }
+        .switch-to-weth {
+          color: #ff0038;
+          position: absolute;
+          top: 5px;
+          right: 0;
+        }
+        .single-token-input {
+          .bx--text-input__field-wrapper {
+            input {
+              padding-left: 110px;
+            }
+          }
+        }
+        .single-switcher-button {
+          position: absolute;
+          background-color: $ui-02 !important;
+          color: $text-01 !important;
+          font-size: 14px !important;
+          font-weight: 600;
+          min-height: 40px;
+          min-width: 97px;
+          top: 29px;
+          padding-left: 16px !important;
+          padding-right: 16px !important;
+          border-right: 1px solid $ui-background;
+          svg {
+            margin-left: 10px;
+          }
+          &:focus {
+            border-right: 1px solid $ui-background !important;
+          }
+        }
+      }
+    }
+    .token-splitter {
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+    }
+    .token-action {
+      width: calc(100% + 32px);
+      margin-left: -16px;
+      margin-top: 16px;
+      font-size: 12px;
+      .token-action-values {
+        padding: 16px 16px;
+        border-top: 1px solid $ui-background;
+        display: flex;
+        justify-content: space-between;
+        .value {
+          font-weight: 600;
+          font-size: 12px;
+          color: $text-02;
+        }
+      }
+    }
+    .deposit-button {
+      width: calc(100% + 32px);
+      min-width: calc(100% + 32px);
+      margin-left: -16px;
+      font-size: 15px !important;
+      .icon-loading {
+        width: 40px;
+        min-height: 1.5rem !important;
+        .bx--inline-loading__animation {
+          height: 1.5rem !important;
+          .bx--loading {
+            width: 1rem !important;
+            height: 1rem !important;
+            margin-right: 6px;
+            .bx--loading__svg {
+              stroke: $text-02;
+            }
+          }
+        }
+        .bx--inline-loading__text {
+          color: $ui-background;
+        }
+      }
+    }
+    .withdraw-tab {
+      .withdraw-slider {
+        position: relative;
+        .bx--slider-container {
+          width: 100%;
+          .bx--slider__range-label {
+            color: $text-01 !important;
+          }
+          .bx--slider__filled-track {
+            background: #ff0038 !important;
+          }
+          .bx--slider__thumb {
+            background: #ff0038 !important;
+          }
+          .bx--slider-text-input {
+            display: none;
+          }
+          .bx--slider__track {
+            background: $active-ui !important;
+            &:before {
+              background: $ui-04;
+            }
+          }
+        }
+        .slider-percentage-input {
+          position: absolute !important;
+          right: 0;
+          top: 5px;
+          width: 55px;
+          input {
+            background-color: $ui-02 !important;
+            color: $text-01 !important;
+            padding: 0 12px;
+            text-align: center;
+            border-bottom: 1px solid $text-01 !important;
+          }
+        }
+        .slider-max-button {
+          position: absolute;
+          right: 57px;
+          top: 25px;
+          padding: 0 9px;
+          min-height: 34px;
+          background-color: $ui-01;
+          &:hover {
+            color: $text-02;
+            text-decoration: none;
+          }
+        }
+        .visor-amount {
+          display: block;
+          margin-top: 8px;
+        }
+        .cv-text-input {
+          margin-top: 5px;
+          label {
+            color: $text-01;
+          }
+          .bx--form__helper-text {
+            color: $text-01;
+          }
+          input {
+            background-color: $ui-03 !important;
+          }
+        }
+        .max-button {
+          position: absolute;
+          right: 6px;
+          top: 28px;
+          font-size: 15px !important;
+          padding: 0;
+          min-height: 2rem;
+          padding-left: 10px !important;
+          padding-right: 10px !important;
+          background-color: $ui-03 !important;
+          color: $text-01 !important;
+        }
+        .withdraw-button {
+          width: calc(100% + 32px);
+          min-width: calc(100% + 32px);
+          margin-left: -16px;
+          font-size: 15px !important;
+          .icon-loading {
+            width: 40px;
+            min-height: 1.5rem !important;
+            .bx--inline-loading__animation {
+              height: 1.5rem !important;
+              .bx--loading {
+                width: 1rem !important;
+                height: 1rem !important;
+                margin-right: 6px;
+                .bx--loading__svg {
+                  stroke: $text-02;
+                }
+              }
+            }
+            .bx--inline-loading__text {
+              color: $ui-background;
+            }
+          }
+        }
+      }
+      .withdraw-action {
+        width: calc(100% + 32px);
+        margin-left: -16px;
+        margin-top: 16px;
+        font-size: 12px;
+        .withdraw-action-values {
+          padding: 16px 16px;
+          border-top: 1px solid $ui-background;
+          .row {
+            display: flex;
+            width: 100%;
+            margin-bottom: 10px;
+            justify-content: space-between;
+            .value {
+              font-weight: 600;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+    .subscribe-tab {
+      .subscribe-content {
+        .title {
+          color: $text-01;
+          font-size: 14px;
+          font-weight: 600;
+          display: block;
+        }
+        .sub-title {
+          color: $text-02;
+          font-size: 14px;
+          display: block;
+        }
+        .mb-8 {
+          margin-bottom: 8px;
+        }
+        .header {
+          padding-bottom: 16px;
+        }
+        .content {
+          display: flex;
+          width: calc(100% + 32px);
+          margin-left: -16px;
+          justify-content: space-between;
+          .section {
+            width: 100%;
+            padding: 16px;
+            border: 1px solid $ui-background;
+            border-left: none;
+            &:last-child {
+              border-right: none;
+            }
+          }
+        }
+      }
+      .subscribe-chart {
+        padding: 16px 0;
+        .bx--chart-holder .bx--cc--chart-wrapper {
+          background: $ui-01;
+          .layout-child.toolbar {
+            display: none;
+          }
+        }
+        .bx--chart-holder {
+          background: $ui-01;
+          color: $text-01;
+          .bx--cc--area path.area {
+            fill: $ui-03 !important;
+            stroke: $ui-03 !important;
+          }
+          .bx--cc--meter rect.container {
+            fill: $ui-03;
+          }
+          .bx--cc--gauge path.arc-background {
+            fill: $ui-03;
+          }
+          .bx--cc--meter-title text.meter-title,
+          .bx--cc--meter-title text.percent-value {
+            fill: $text-01;
+          }
+          .bx--cc--grid rect.chart-grid-backdrop {
+            fill: transparent !important;
+            stroke: transparent;
+          }
+          .bx--cc--grid g.x.grid g.tick line,
+          .bx--cc--grid g.y.grid g.tick line {
+            stroke: $ui-03;
+          }
+          .bx--cc--axes g.axis {
+            g.tick text {
+              font-weight: normal !important;
+              fill: $text-01;
+            }
+            .axis-title {
+              fill: $text-01;
+            }
+          }
+          g.bx--cc--legend g.legend-item text {
+            fill: $text-01;
+          }
+          g.bx--cc--scatter circle.dot.unfilled {
+            fill: $ui-background;
+          }
+          .bx--cc--ruler line.ruler-line {
+            stroke: $text-01;
+          }
+        }
+      }
+      .subscribe-action {
+        width: calc(100% + 32px);
+        margin-left: -16px;
+        margin-top: 16px;
+        .subscribe-button {
+          width: 100%;
+          min-width: 100%;
+          font-size: 15px !important;
+          .icon-loading {
+            width: 40px;
+            min-height: 1.5rem !important;
+            .bx--inline-loading__animation {
+              height: 1.5rem !important;
+              .bx--loading {
+                width: 1rem !important;
+                height: 1rem !important;
+                margin-right: 6px;
+                .bx--loading__svg {
+                  stroke: $text-02;
+                }
+              }
+            }
+            .bx--inline-loading__text {
+              color: $ui-background;
+            }
+          }
+        }
+      }
+    }
+  }
+}

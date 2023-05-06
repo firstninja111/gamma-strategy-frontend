@@ -1,0 +1,54 @@
+.pending-transactions.cv-notifiation {
+  &.vault-warning {
+    .close-icon {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+    }
+  }
+
+  top: 125px;
+  padding: 1rem;
+  padding-right: 3.9rem;
+  border-left: 3px solid $support-02;
+
+  .notification__pending-title {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+    .icon {
+      margin-right: 1rem;
+      fill: $support-02;
+    }
+  }
+  .notification__pending-content {
+    padding-left: 1.2rem;
+    .notification__pending-content__item {
+      display: flex;
+      align-items: center;
+      a {
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        span {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  .bx--inline-loading {
+    justify-content: start;
+    height: 1rem;
+    .bx--inline-loading__animation {
+      .bx--loading {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+    .bx--inline-loading__text {
+      color: $text-01;
+    }
+  }
+}

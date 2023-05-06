@@ -1,0 +1,55 @@
+export const networkInfos = {
+  "1": {
+    name: "mainnet",
+    networkName: "mainnet",
+    number: 1,
+    rpcUrl: "https://mainnet.infura.io/v3/",
+    explorer: "https://etherscan.io",
+    api2: "https://gammawire.net",
+    // api1: "https://gammawire.net",
+    api1: "https://visordata-o9v9w.ondigitalocean.app",
+    version: "real"
+  },
+  "5": {
+    name: "goerli",
+    networkName: "goerli",
+    number: 5,
+    rpcUrl: "https://goerli.infura.io/v3/",
+    explorer: "https://goerli.etherscan.io",
+    version: "beta",
+  },
+  "10": {
+    name: "optimistic",
+    networkName: "Optimistic Ethereum",
+    number: 10,
+    rpcUrl: "https://mainnet.optimism.io",
+    explorer: "https://arbiscan.io",
+    version: "beta",
+  },
+  "42161": {
+    name: "arbitrum",
+    networkName: "Arbitrum Mainnet",
+    number: 42161,
+    rpcUrl: "https://arb1.arbitrum.io/rpc",
+    explorer: "https://arbiscan.io",
+    version: "beta",
+  },
+  "421611": {
+    name: "arbitrumTestnet",
+    networkName: "Arbitrum Testnet",
+    number: 421611,
+    rpcUrl: "https://rinkeby.arbitrum.io/rpc",
+    explorer: "https://rinkeby-explorer.arbitrum.io/",
+    version: "beta",
+  },
+  "137": {
+    name: "polygon",
+    networkName: "Polygon Mainnet",
+    number: 137,
+    rpcUrl: "https://polygon-rpc.com/",
+    explorer: "https://polygonscan.com/",
+    api2: "https://gammawire.net/polygon",
+    api1: "https://visordata-o9v9w.ondigitalocean.app/polygon",
+    version: "real",
+  }
+};
